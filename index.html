@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EPSS - Easy Professional Sourcing System</title>
+  <title>EPSS - Sourcing Tools</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -13,16 +12,32 @@
       margin: 0;
     }
     .container {
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
       background: #fff;
       padding: 2rem;
       border-radius: 1rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
+    .logo-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .logo-title img {
+      height: 40px;
+    }
     h1 {
-      text-align: center;
       color: #0073b1;
+      margin: 0;
+    }
+    h2 {
+      text-align: center;
+      font-weight: normal;
+      color: #444;
+      margin-top: 0;
+      font-size: 1.1rem;
     }
     label {
       display: block;
@@ -47,7 +62,6 @@
       border-radius: 0.5rem;
       font-size: 1.1rem;
       cursor: pointer;
-      transition: background-color 0.2s;
     }
     button:hover {
       background-color: #005885;
@@ -56,48 +70,148 @@
 </head>
 <body>
   <div class="container">
-    <h1>EPSS</h1>
+    <div class="logo-title">
+      <img src="https://drive.google.com/uc?export=view&id=1sVXUKdjc_kP20octG27VPyzhApAjNJDW" alt="Logo EPSS">
+      <h1>EPSS</h1>
+    </div>
+    <h2>EPHunter Sourcing System</h2>
+
     <label for="keyword">Keyword / Jabatan</label>
-    <input type="text" id="keyword" placeholder="Contoh: UI Designer">
+    <input type="text" id="keyword" placeholder="Contoh: Finance Officer">
 
     <label for="location">Lokasi</label>
-    <input type="text" id="location" placeholder="Contoh: Indonesia">
-
-    <label for="company">Perusahaan</label>
-    <input type="text" id="company" placeholder="Contoh: Tokopedia">
+    <input type="text" id="location" placeholder="Contoh: Jakarta">
 
     <label for="industry">Industri</label>
-    <input type="text" id="industry" placeholder="Contoh: E-commerce">
+    <select id="industry">
+      <option value="">-- Pilih Industri --</option>
+      <option value="Teknologi Informasi">Teknologi Informasi (IT)</option>
+      <option value="Pemasaran & Periklanan">Pemasaran & Periklanan</option>
+      <option value="Keuangan">Keuangan</option>
+      <option value="Pendidikan">Pendidikan</option>
+      <option value="Perawatan Kesehatan">Perawatan Kesehatan</option>
+      <option value="Konsultasi">Konsultasi</option>
+      <option value="Manufaktur">Manufaktur</option>
+      <option value="Energi">Energi</option>
+      <option value="Jasa Keuangan">Jasa Keuangan</option>
+      <option value="Asuransi">Asuransi</option>
+      <option value="Farmasi">Farmasi</option>
+      <option value="Perangkat Lunak">Perangkat Lunak</option>
+      <option value="Perangkat Keras Komputer">Perangkat Keras Komputer</option>
+      <option value="Media & Komunikasi">Media & Komunikasi</option>
+      <option value="Desain">Desain</option>
+      <option value="Penelitian & Pengembangan">Penelitian & Pengembangan</option>
+      <option value="Sektor Publik">Sektor Publik</option>
+      <option value="Non-Profit">Non-Profit</option>
+      <option value="Hukum">Hukum</option>
+      <option value="Akademik">Akademik</option>
+      <option value="Perdagangan Eceran">Perdagangan Eceran</option>
+      <option value="Perhotelan">Perhotelan</option>
+      <option value="Transportasi & Logistik">Transportasi & Logistik</option>
+      <option value="Kreatif">Kreatif</option>
+      <option value="Teknik">Teknik</option>
+      <option value="Arsitektur">Arsitektur</option>
+      <option value="Pembangunan">Pembangunan</option>
+      <option value="Pertanian">Pertanian</option>
+      <option value="Makanan & Minuman">Makanan & Minuman</option>
+      <option value="E-Commerce">E-Commerce</option>
+      <option value="Pariwisata">Pariwisata</option>
+      <option value="Seni & Budaya">Seni & Budaya</option>
+      <option value="Musik">Musik</option>
+      <option value="Film & Video">Film & Video</option>
+      <option value="Televisi & Radio">Televisi & Radio</option>
+      <option value="Penerbitan">Penerbitan</option>
+      <option value="Telekomunikasi">Telekomunikasi</option>
+      <option value="Penelitian Pasar">Penelitian Pasar</option>
+      <option value="Pengembangan Produk">Pengembangan Produk</option>
+      <option value="Pendidikan Tinggi">Pendidikan Tinggi</option>
+      <option value="Pendidikan Dasar & Menengah">Pendidikan Dasar & Menengah</option>
+      <option value="Pendidikan Kejuruan">Pendidikan Kejuruan</option>
+      <option value="Investasi">Investasi</option>
+      <option value="Pertambangan">Pertambangan</option>
+      <option value="Pertambangan Batu bara">Pertambangan Batu bara</option>
+      <option value="Minyak">Minyak</option>
+      <option value="Gas">Gas</option>
+    </select>
 
     <label for="experience">Tingkat Pengalaman</label>
     <select id="experience">
-      <option value="">-- Pilih --</option>
-      <option value="1">Entry level</option>
-      <option value="2">Associate</option>
-      <option value="3">Mid-Senior level</option>
-      <option value="4">Director</option>
-      <option value="5">Executive</option>
+      <option value="">-- Pilih Tingkat Pengalaman --</option>
+      <option value="1">Blue Collar</option>
+      <option value="2">Staff</option>
+      <option value="3">Officer</option>
+      <option value="4">Assistant Manager</option>
+      <option value="5">Manager</option>
+      <option value="6">Senior Manager</option>
+      <option value="7">General Manager</option>
+      <option value="8">Executive</option>
+      <option value="9">Specialist</option>
+      <option value="10">Director</option>
     </select>
 
-    <button type="button" id="searchBtn">Cari di LinkedIn</button>
+    <label for="company">Perusahaan</label>
+    <input type="text" id="company" placeholder="Contoh: Google" oninput="suggestCompany(this.value)">
+    <div id="company-suggestions" style="border: 1px solid #ccc; border-radius: 0.5rem; display: none; padding: 0.5rem; background: #fff; position: absolute; z-index: 999; max-height: 200px; overflow-y: auto;"></div>
+
+    <button type="button" onclick="searchLinkedIn()">Mulai Sourcing</button>
   </div>
 
   <script>
-    document.getElementById("searchBtn").addEventListener("click", function() {
-      const keyword = encodeURIComponent(document.getElementById("keyword").value.trim());
-      const location = encodeURIComponent(document.getElementById("location").value.trim());
-      const company = encodeURIComponent(document.getElementById("company").value.trim());
-      const industry = encodeURIComponent(document.getElementById("industry").value.trim());
+    const companyList = [
+      "Google", "Microsoft", "Amazon", "Apple", "Facebook", "Netflix", "Tesla", "IBM", "Samsung", "Oracle",
+      "Intel", "Cisco", "Adobe", "Spotify", "Tokopedia", "Shopee", "Grab", "Traveloka", "Bukalapak", "GoTo",
+      "Unilever", "Nestle", "Danone", "BNI", "Mandiri", "BCA", "Telkom", "Indosat", "XL Axiata"
+    ];
+
+    function suggestCompany(input) {
+      const container = document.getElementById("company-suggestions");
+      container.innerHTML = "";
+      if (input.length < 2) {
+        container.style.display = "none";
+        return;
+      }
+      const suggestions = companyList.filter(c => c.toLowerCase().startsWith(input.toLowerCase()));
+      if (suggestions.length === 0) {
+        container.style.display = "none";
+        return;
+      }
+      suggestions.forEach(c => {
+        const div = document.createElement("div");
+        div.textContent = c;
+        div.style.padding = "4px 8px";
+        div.style.cursor = "pointer";
+        div.addEventListener("click", () => {
+          document.getElementById("company").value = c;
+          container.style.display = "none";
+        });
+        container.appendChild(div);
+      });
+      const rect = document.getElementById("company").getBoundingClientRect();
+      container.style.display = "block";
+      container.style.top = rect.bottom + window.scrollY + "px";
+      container.style.left = rect.left + window.scrollX + "px";
+      container.style.width = rect.width + "px";
+    }
+
+    function searchLinkedIn() {
+      const keyword = document.getElementById("keyword").value.trim();
+      const location = document.getElementById("location").value.trim();
+      const industry = document.getElementById("industry").value.trim();
       const experience = document.getElementById("experience").value;
+      const company = document.getElementById("company").value.trim();
 
-      let url = `https://www.linkedin.com/search/results/people/?keywords=${keyword}`;
-      if (location) url += `&location=${location}`;
-      if (company) url += `&currentCompany=${company}`;
-      if (industry) url += `&industry=${industry}`;
+      const booleanParts = [];
+      if (keyword) booleanParts.push(`"${keyword}"`);
+      if (industry) booleanParts.push(`"${industry}"`);
+      if (company) booleanParts.push(`"${company}"`);
+      if (location) booleanParts.push(`"${location}"`);
+
+      const query = encodeURIComponent(booleanParts.join(" AND "));
+      let url = `https://www.linkedin.com/search/results/people/?keywords=${query}`;
       if (experience) url += `&seniorityLevel=${experience}`;
-
       window.open(url, '_blank');
-    });
+    }
   </script>
 </body>
 </html>
+
