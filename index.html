@@ -18,22 +18,25 @@
       padding: 2rem;
       border-radius: 1rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      position: relative;
     }
-     .logo-title {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start; /* dari center jadi kiri */
-        gap: 1rem;
+    .logo-top-left {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
     }
-    .logo-title img {
+    .logo-top-left img {
       height: 80px;
     }
-    h1 {
+    .title-section {
+      text-align: center;
+      padding-top: 1rem;
+    }
+    .title-section h1 {
       color: #0073b1;
       margin: 0;
     }
-    h2 {
-      text-align: center;
+    .title-section h2 {
       font-weight: normal;
       color: #444;
       margin-top: 0;
@@ -70,11 +73,13 @@
 </head>
 <body>
   <div class="container">
-    <div class="logo-title">
+    <div class="logo-top-left">
       <img src="https://raw.githubusercontent.com/ephunter2025/EPSS/main/logo.png" alt="Logo EPSS">
-      <h1>EPSS</h1>
     </div>
-    <h2>EPHunter Sourcing System</h2>
+    <div class="title-section">
+      <h1>EPSS</h1>
+      <h2>EPHunter Sourcing System</h2>
+    </div>
 
     <label for="keyword">Keyword / Jabatan</label>
     <input type="text" id="keyword" placeholder="Contoh: Finance Officer">
