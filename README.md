@@ -1,2 +1,0 @@
-# EPSS
-Sourcing Recruitment Tools
